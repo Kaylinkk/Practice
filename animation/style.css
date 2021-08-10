@@ -1,0 +1,93 @@
+body {
+  background-color: black;
+}
+
+.container {
+  display: block;
+  width: 700px;
+  height: 600px;
+  margin: 20px auto; /* 위아래 20px 양쪽 auto*/
+  background-color: #77c4be;
+}
+.materialBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 40%;
+}
+.dotBox {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.dotBox {
+  animation: spin 2s 1s normal infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dot {
+  margin: 10px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.squareBox {
+  display: flex;
+}
+
+.bar {
+  margin: 3px;
+  width: 10px;
+  height: 40px;
+
+  background-color: #fff;
+}
+
+.bar {
+  animation: loading 1s ease-in-out 2s infinite normal both;
+}
+@keyframes loading {
+  0%,
+  25%,
+  50% {
+    transform: none;
+  }
+
+  75% {
+    transform: scaleY(2);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+div .squareBox .bar:nth-child(1) {
+  animation-delay: 0.1s;
+}
+div .squareBox .bar:nth-child(2) {
+  animation-delay: 0.2s;
+}
+div .squareBox .bar:nth-child(3) {
+  animation-delay: 0.3s;
+}
+div .squareBox .bar:nth-child(4) {
+  animation-delay: 0.4s;
+}
+div .squareBox .bar:nth-child(5) {
+  animation-delay: 0.5s;
+}
