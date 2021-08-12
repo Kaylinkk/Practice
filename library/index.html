@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>library</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <i class="fas fa-bars"></i>
+        <h1>library</h1>
+        <i class="fas fa-shopping-basket"></i>
+      </header>
+
+      <div class="form">
+        <form action="#" method="GET">
+          <input id="input1" type="text" placeholder="Search books..." />
+          <button class="submit" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <section class="sectionA">
+        <h2>Book of the day</h2>
+        <div class="book">
+          <img src="/img/Harry1.jpg" alt="Harry1" class="stone" />
+          <div class="bookInfo">
+            <h3>Harry Potter and sorcerer'stone</h3>
+            <p class="H1P">J.K.Rowling</p>
+            <div class="RatingStar">
+              <div class="RatingScore">
+                <div class="outer-star"><div class="inner-star"></div></div>
+              </div>
+            </div>
+
+            <div>
+              <button class="btn1">Journey</button>
+              <button class="btn2">Biography</button>
+            </div>
+
+            <div class="bookbtn">
+              <button class="circle"><i class="fas fa-bookmark"></i></button>
+              <button class="bookbtn2">Book now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sectionB">
+        <h2>Top Adventures</h2>
+        <div class="scroll">
+          <img src="/img/Harry2.jpg" alt="Harry2" class="image" />
+          <img src="/img/Harry3.jpg" alt="Harry3" class="image" />
+          <img src="/img/Harry4.jpg" alt="Harry4" class="image" />
+          <img src="/img/Harry5.jpg" alt="Harry5" class="image" />
+          <img src="/img/Harry5.jpg" alt="Harry5" class="image" />
+        </div>
+      </section>
+
+      <section class="sectionC">
+        <h2>Popular authors</h2>
+        <div class="author">
+          <img src="/img/JK.jpg" alt="Harry1" class="stone" />
+          <div class="authorInfo">
+            <h2>J.K.Rowling</h2>
+            <p class="information">
+              Joanne Rowling CH, OBE, HonFRSE, FRCPE, FRSL, better known by her
+              pen name J. K. Rowling, is a British author, philanthropist, film
+              producer, television producer, and screenwriter.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      ratings = { RatingScore: 4.5 };
+      totalRating = 5;
+      table = document.querySelector(".RatingStar");
+      function rateIt() {
+        for (rating in ratings) {
+          ratingPercentage = (ratings[rating] / totalRating) * 100;
+          ratingRounded = Math.round(ratingPercentage / 10) * 10 + "%";
+          star = table.querySelector(`.${rating} .inner-star`);
+          numberRating = table.querySelector(`.${rating} .numberRating`);
+          star.style.width = ratingRounded;
+          numberRating.innerText = ratings[rating];
+        }
+      }
+      rateIt();
+    </script>
+  </body>
+</html>

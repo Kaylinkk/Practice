@@ -1,0 +1,192 @@
+:root {
+  --front_color: #ffce33;
+  --gray_color: #f2f2f2;
+  --dark_gray: #c8c8c0;
+}
+
+.container {
+  width: 400px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffce33;
+  background-color: var(--front_color);
+  width: 400px;
+  height: 100px;
+  z-index: 2;
+}
+.form {
+  display: flex;
+  position: relative;
+  left: 10px;
+  bottom: 10px;
+  z-index: 1;
+}
+input {
+  height: 2rem;
+  width: 23rem;
+  border: 0.1px solid white;
+  border-radius: 1rem;
+  padding-right: 10px;
+  box-shadow: 1px 2px var(--gray_color);
+}
+input::placeholder {
+  position: relative;
+  left: 10px;
+  color: var(--gray_color);
+}
+
+input:focus {
+  outline: none;
+}
+
+.submit {
+  position: relative;
+  right: 40px;
+  height: 10px;
+  width: 10px;
+  background-color: transparent;
+  color: var(--gray_color);
+  border-style: none;
+  border-radius: 50px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 30px;
+}
+
+.fa-bars,
+.fa-shopping-basket {
+  width: 20px;
+  height: 20px;
+  margin: 30px;
+}
+
+.book,
+.author {
+  display: flex;
+  justify-content: left;
+  margin-left: 20px;
+}
+.bookInfo,
+.authorInfo {
+  position: relative;
+  bottom: 13px;
+}
+
+h3 {
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+h2 {
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.H1P,
+.information {
+  position: inherit;
+  bottom: 5px;
+  color: var(--dark_gray);
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.btn1,
+.btn2 {
+  font-size: 10px;
+  width: 70px;
+  height: 20px;
+  border: 0.1px solid white;
+  border-radius: 5px;
+  padding-right: 3px;
+  margin-left: 15px;
+}
+
+.bookbtn {
+  position: relative;
+  left: 10px;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--front_color);
+  margin-right: 30px;
+  border: none;
+}
+
+.bookbtn2 {
+  font-size: 10px;
+  width: 80px;
+  height: 30px;
+  border: 0.1px solid black;
+  border-radius: 5px;
+  padding-right: 3px;
+  margin-left: 15px;
+  color: var(--dark_gray);
+  background-color: black;
+}
+
+.fa-bookmark {
+  font-size: 10px;
+}
+
+.RatingStar {
+  position: relative;
+  bottom: 10px;
+  padding-left: 10px;
+}
+
+.stone {
+  width: 100px;
+  height: 140px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.inner-star::before {
+  color: #ff9600;
+}
+.outer-star {
+  position: relative;
+  display: inline-block;
+  color: #cccccc;
+}
+.inner-star {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.outer-star::before,
+.inner-star::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+}
+
+.scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 400px;
+  margin-left: 10px;
+}
+.image {
+  width: 70px;
+  height: 100px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin: 0 10px 0 10px;
+}
